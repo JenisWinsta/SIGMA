@@ -1,0 +1,71 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<div class="row mt-3">
+  <div class="col-8 offset-2">
+    <h3>Create a new listing</h3>
+    <form method="POST" action="/listings/"  novalidate class="needs-validation" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="title" class="form-label" class="cols-mb-2">Title</label>
+        <input
+          type="text"
+          name="listing[title]"
+          class="form-control cols-mb-10"
+          placeholder="enter title"
+          required
+        />
+        <div class="valid-feedback">Title looks good!</div>
+      </div>
+      <div>
+        <label for="Description" class="form-label">Description</label>
+        <textarea
+          name="listing[description]"
+          class="form-control"
+          required
+        ></textarea>
+      </div>
+
+      <div>
+        <label for="Image" class="form-label">Upload Image</label>
+        <input
+          type="file"
+          name="listing[image][url]"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="Price" class="form-label">Price</label>
+          <input
+            type="number"
+            name="listing[price]"
+            class="form-control"
+            placeholder="enter price"
+            required
+          />
+        </div>
+        <div class="col-md-8">
+          <label for="Country" class="form-label">Country</label>
+          <input
+            type="text"
+            name="listing[country]"
+            class="form-control"
+            placeholder="enter country"
+            required
+          />
+        </div>
+      </div>
+
+      <div>
+        <label for="Location" class="form-label">Location</label>
+        <input
+          type="text"
+          name="listing[location]"
+          class="form-control"
+          placeholder="enter location"
+          required
+        />
+      </div>
+      <button class="btn btn-dark add-btn mt-3">ADD</button> <br /><br />
+    </form>
+  </div>
+</div>
